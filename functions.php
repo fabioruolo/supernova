@@ -10,7 +10,6 @@ define( "SN_JQUERY_VERSION" , "1.10.2" );
 *  Styles
 *  --------------------------------- */
 function sn_enqueue_styles() {
-	wp_register_style( 'fonts' , "//f.fontdeck.com/s/css/l4MsFun30OJhB9DTDGcb8JQSAOQ/www.christmasgifs.org/26675.css", array(), null, 'screen' );
 	wp_register_style( 'main' , SN_THEME_PATH . "/css/m.css", array(), SN_THEME_VERSION, 'screen' );
 
 	wp_enqueue_style( 'fonts' );
