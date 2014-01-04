@@ -33,7 +33,7 @@
 <div id="wrapper">
 	<header id="header">
 		<nav>
-			<ul><?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?></ul>
+			<ul><?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?></ul>
 		</nav>
 	</header>
 	<div id="main">
