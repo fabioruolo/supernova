@@ -12,7 +12,6 @@ define( "SN_JQUERY_VERSION" , "1.10.2" );
 function sn_enqueue_styles() {
 	wp_register_style( 'main' , SN_THEME_PATH . "/css/m.css", array(), SN_THEME_VERSION, 'screen' );
 
-	wp_enqueue_style( 'fonts' );
 	wp_enqueue_style( 'main' );
 }
 
@@ -36,8 +35,14 @@ add_action( "wp_enqueue_scripts" , "sn_enqueue_styles" );
 add_action( "wp_enqueue_scripts" , "sn_enqueue_scripts" );
 
 /* ---------------------------------
-*  Print <head> HTML tags
+*  <head> functions
 *  --------------------------------- */
+function sn_meta_tags( $meta ) {
+	foreach ( $meta as $name => $content ) {
+		print '<meta name="' . $name . '" content="' . $content . '">';
+	}
+}
+
 function sn_google_cdn_check() {
 	print '<script>window.jQuery || document.write(\'<script src="' . SN_THEME_PATH . '/assets/js/lib/jquery-' . SN_JQUERY_VERSION . '.min.js\"><\/script>\')</script>';
 }
