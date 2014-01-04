@@ -12,28 +12,33 @@
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<?php
-	$metas = array(
-		'description' => '',
-		'author'      => '',
-		'og:title'    => '',
-		'og:image'    => '',
-		'og:url'      => '',
-		'og:type'     => '',
-		'fb:app_id'   => ''
-	);
-	sn_meta_tags( $metas );
-	sn_google_analytics( '' );
+		$metas = array(
+			'description' => '',
+			'author'      => '',
+			'og:title'    => '',
+			'og:image'    => '',
+			'og:url'      => '',
+			'og:type'     => '',
+			'fb:app_id'   => ''
+		);
+		sn_meta_tags( $metas );
+		sn_google_analytics( '' );
 
-    wp_head();
-    sn_google_cdn_check();
+	    wp_head();
+	    sn_google_cdn_check();
     ?>
 </head>
 
 <body <?php body_class($class); ?>>
 <div id="wrapper">
 	<header id="header">
-		<nav>
-			<ul><?php wp_nav_menu( array( 'theme_location' => 'header_menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?></ul>
-		</nav>
+		<?php
+			$menu = array(
+				'theme_location' => 'header_menu',
+				'container'      => '',
+				'items_wrap'     => '%3$s'
+			);
+			wp_nav_menu( $menu );
+		?>
 	</header>
 	<div id="main">
