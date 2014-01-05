@@ -32,13 +32,16 @@
 <body <?php body_class($class); ?>>
 <div id="wrapper">
 	<header id="header">
+		<nav>
 		<?php
 			$menu = array(
-				'theme_location' => 'header_menu',
-				'container'      => '',
-				'items_wrap'     => '%3$s'
+				'theme_location'  => 'header_menu',
+				'menu'            => 'Main Navigation',
+				'container'       => false,
+				'items_wrap'      => '<ul>%3$s</ul>'
 			);
 			wp_nav_menu( $menu );
 		?>
+		</nav>
 	</header>
 	<div id="main">
