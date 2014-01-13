@@ -25,7 +25,6 @@
 		sn_google_analytics( '' );
 
 	    wp_head();
-	    sn_google_cdn_check();
     ?>
 </head>
 
@@ -44,4 +43,4 @@
 		?>
 		</nav>
 	</header>
-	<div id="main">
+	<main>

@@ -43,13 +43,15 @@ function sn_meta_tags( $meta ) {
 	}
 }
 
+function sn_google_analytics( $code ) {
+	print '<script>var _gaq = _gaq || [];_gaq.push(["_setAccount", "' . $code . '"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);})();</script>';
+}
+
 function sn_google_cdn_check() {
 	print '<script>window.jQuery || document.write(\'<script src="' . SN_THEME_PATH . '/assets/js/lib/jquery-' . SN_JQUERY_VERSION . '.min.js\"><\/script>\')</script>';
 }
 
-function sn_google_analytics( $code ) {
-	print '<script>var _gaq = _gaq || [];_gaq.push(["_setAccount", "' . $code . '"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);})();</script>';
-}
+add_action('wp_head', 'sn_google_cdn_check');
 
 /* ---------------------------------
 *  WP: Remove tags from <head>
