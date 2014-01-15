@@ -19,11 +19,12 @@ function sn_enqueue_styles() {
 *  Scripts
 *  --------------------------------- */
 function sn_enqueue_scripts() {
-	wp_register_script( 'google_jquery', "//ajax.googleapis.com/ajax/libs/jquery/" . SN_JQUERY_VERSION . "/jquery.min.js", array(), SN_THEME_VERSION, false );
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', "//ajax.googleapis.com/ajax/libs/jquery/" . SN_JQUERY_VERSION . "/jquery.min.js", array(), SN_THEME_VERSION, false );
 	wp_register_script( 'modernizr', "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js", array(), SN_THEME_VERSION, false );
 	wp_register_script( 'main', SN_THEME_PATH . "/js/main.js", array(), null, true );
 
-	wp_enqueue_script( 'google_jquery' );
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'main' );
 }
