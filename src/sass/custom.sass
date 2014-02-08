@@ -1,0 +1,20 @@
+=font-size($sizeValue: 1.6)
+    font-size: ($sizeValue * 10) + px
+    font-size: $sizeValue + rem
+
+// =font($face)
+//     @if $face == ''
+//     @else if $face == ''
+
+=size($width: '', $height: '')
+    @if $height != ''
+        width: $width
+        height: $height
+    @else
+        width: $width
+        height: $width
+
+=vertical-align($pos: relative)
+    position: $pos
+    top: 50%
+    +transform( translateY(-50%) )
