@@ -1,1 +1,1 @@
-/* @codekit-append "vendor/jquery-1.10.2.min.js";
+/* @codekit-append "vendor/jquery-1.10.2.min.js"; */
