@@ -19,11 +19,11 @@ function sn_enqueue_styles() {
 *  Scripts
 *  --------------------------------- */
 function sn_enqueue_scripts() {
-	wp_register_script( 'google_jquery', "//ajax.googleapis.com/ajax/libs/jquery/" . SN_JQUERY_VERSION . "/jquery.min.js", array(), SN_THEME_VERSION, false );
+	// wp_register_script( 'google_jquery', "//ajax.googleapis.com/ajax/libs/jquery/" . SN_JQUERY_VERSION . "/jquery.min.js", array(), SN_THEME_VERSION, false );
 	wp_register_script( 'modernizr', "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js", array(), SN_THEME_VERSION, false );
 	wp_register_script( 'main', SN_THEME_PATH . "/js/main.js", array(), null, true );
 
-	wp_enqueue_script( 'google_jquery' );
+	// wp_enqueue_script( 'google_jquery' );
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'main' );
 }
@@ -47,11 +47,11 @@ function sn_google_analytics( $code ) {
 	print '<script>var _gaq = _gaq || [];_gaq.push(["_setAccount", "' . $code . '"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);})();</script>';
 }
 
-function sn_google_cdn_check() {
-	print '<script>window.jQuery || document.write(\'<script src="' . SN_THEME_PATH . '/assets/js/lib/jquery-' . SN_JQUERY_VERSION . '.min.js\"><\/script>\')</script>';
-}
+// function sn_google_cdn_check() {
+// 	print '<script>window.jQuery || document.write(\'<script src="' . SN_THEME_PATH . '/assets/js/lib/jquery-' . SN_JQUERY_VERSION . '.min.js\"><\/script>\')</script>';
+// }
 
-add_action('wp_head', 'sn_google_cdn_check');
+// add_action('wp_head', 'sn_google_cdn_check');
 
 /* ---------------------------------
 *  WP: Remove tags from <head>
