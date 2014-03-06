@@ -78,3 +78,27 @@ register_nav_menu( 'header_menu', 'Main Navigation' );
 *  WP: Add theme support and filters
 *  --------------------------------- */
 add_theme_support( 'automatic_feed_links' );
+
+/* ---------------------------------
+*  WP: Custom post types
+*  --------------------------------- */
+// function create_post_types() {
+//  register_post_type( 'project',
+//      array(
+//          'labels' => array(
+//              'name' => __( 'Projects' ),
+//              'singular_name' => __( 'Project' ),
+//              'add_new_item' => __( 'Add New Project' ),
+//              'new_item' => __( 'New Project' ),
+//          ),
+//          'public' => true,
+//          'has_archive' => true,
+//          'rewrite' => array('slug' => 'project'),
+//          'menu_position' => 5,
+//          'supports' => array( 'author', 'title', 'editor', 'thumbnail', 'excerpt' ),
+//          'taxonomies' => array('post_tag')
+//      )
+//  );
+// }
+
+// add_action( 'init', 'create_post_types' );
