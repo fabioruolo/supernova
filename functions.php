@@ -48,7 +48,7 @@ function sn_google_analytics( $code ) {
 }
 
 // function sn_google_cdn_check() {
-// 	print '<script>window.jQuery || document.write(\'<script src="' . SN_THEME_PATH . '/assets/js/lib/jquery-' . SN_JQUERY_VERSION . '.min.js\"><\/script>\')</script>';
+// 	print '<script>window.jQuery || document.write(\'<script src="' . SN_THEME_PATH . '/js/vendor/jquery-' . SN_JQUERY_VERSION . '.min.js\"><\/script>\')</script>';
 // }
 
 // add_action('wp_head', 'sn_google_cdn_check');
