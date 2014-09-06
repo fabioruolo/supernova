@@ -1,0 +1,48 @@
+$default-prefixes: webkit moz ms o
+
+=prefixed($property, $value, $prefixes: $default-prefixes)
+    @each $prefix in $prefixes
+        -#{$prefix}-#{$property}: #{$value}
+    #{$property}: #{$value}
+
+=flexbox()
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+=flex($values)
+    -webkit-box-flex: $values
+    -moz-box-flex:  $values
+    -webkit-flex:  $values
+    -ms-flex:  $values
+    flex:  $values
+
+=order($val)
+    -webkit-box-ordinal-group: $val
+    -moz-box-ordinal-group: $val
+    -ms-flex-order: $val
+    -webkit-order: $val
+    order: $val
+
+=font-size($sizeValue: 1.6)
+    font-size: ($sizeValue * 10) + px
+    font-size: $sizeValue + rem
+
+// =font($face)
+//     @if $face == ''
+//     @else if $face == ''
+
+=size($width: '', $height: '')
+    @if $height != ''
+        width: $width
+        height: $height
+    @else
+        width: $width
+        height: $width
+
+=vertical-align($pos: relative)
+    position: $pos
+    top: 50%
+    +transform( translateY(-50%) )
